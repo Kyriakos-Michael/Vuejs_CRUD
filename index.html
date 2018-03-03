@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue JS CRUD example</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <header>
+	<h1>
+		Vue JS CRUD example
+	</h1>
+	<h3>Create. Read. Update. Delete</h3>
+	<p class="sub">
+		By Kyriakos Michael
+	</p>
+</header>
+
+<div id="app">
+	<div class="container">						
+		<section>
+			<button v-if="!showPerson" v-on:click="showAddPerson" class="btn btn-primary">
+				Add a person
+				<i class="ion ion-android-add"></i>
+			</button>
+			
+			<div v-if="showPerson" class="card card-form">
+				<h3>Adding a new person</h3>
+
+				<div class="form">
+					<label>
+						<span>Name</span>
+						<input type="text" maxLength="20" v-model="newPerson.name" placeholder="Name">
+					</label>
+
+					<label>
+						<span>Age</span>
+						<input type="number" maxLength="20" min="1" max="99" v-model.number="newPerson.age" placeholder="Age">
+					</label>
+
+					<label>
+						<span>Traits</span>
+						<input type="text" maxLength="20" placeholder="Type a trait" @keyup.enter="addTrait" v-model="newPerson.traitField">
+						<span class="help">Hit Enter</span>
+					</label>
+					<div class="traits">
+						<div v-for="(trait, index) in newPerson.traits" class="trait clickable" v-on:click="deleteNewPersonTrait(index)">
+							{{ trait }}
+						</div>
+					</div>
+
+					<div class="form-footer">
+						<button v-on:click="hideAddPerson" class="btn btn-grey">
+							Cancel
+						</button>
+						<button v-on:click="addPerson" class="btn btn-primary">
+							Add <span v-if="newPerson.name">&nbsp;{{ newPerson.name }} to people</span><span v-else>&nbsp;a person</span>
+							<i class="ion ion-android-add"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<h2 v-if="people.length">
+				People <span class="counter">{{ people.length }}</span>
+			</h2>
+			<div v-else>
+				<h3>You haven't added any people</h3>
+				<p>
+					Click on the button above to add someone.
+				</p>
+			</div>
+			<div class="card-wrapper">
+				<div v-for="(person, index) in people" class="card card-person">
+					<h3 v-if="person.name">
+						{{ person.name }}
+					</h3>
+					<h3 v-else>
+						John Doe
+					</h3>
+					<p>
+						Age: 
+						<b v-if="person.age">{{ person.age }}</b>
+						<b v-else>Dead</b>
+					</p>
+					
+					<div class="traits">
+						<div v-for="trait in person.traits" class="trait">
+							{{ trait }}
+						</div>
+						<div class="trait" v-if="!person.traits.length">
+							Talentless
+						</div>
+					</div>
+					
+					<div class="card-footer">
+						<button v-on:click="editPerson(index)" class="btn btn-grey btn-square">
+							<i class="ion ion-android-create"></i>
+						</button>
+						<button v-on:click="deletePerson(index)" class="btn btn-danger btn-square">
+							<i class="ion ion-android-delete"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<a href="https://twitter.com/KyriakosMichail" target="_blank">
+				@KyriakosMichail
+			</a> on Twitter
+		</footer>
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

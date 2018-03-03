@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+$prim: rgb(50, 142, 255);
+$danger: rgb(239, 45, 64);
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	text-align: center;
+}
+
+body,
+button,
+input {
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+}
+
+// Layout
+
+.container {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+section {
+	margin-bottom: 30px;
+}
+
+header {
+	padding: 60px 15px 30px;
+}
+
+// Fonts
+
+h1 {
+	font-weight: 300;
+	font-size: 4rem;
+}
+
+h2,
+h3{
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+.sub {
+	opacity: .66;
+}
+
+// Counter
+
+.counter {
+	border-radius: 40px;
+	background-color: rgba(0, 0, 0, .1);
+	padding: 0 20px;
+}
+
+// Buttons
+
+.btn {
+	appearance: none;
+	border-radius: 4px;
+	padding: 10px 15px;
+	box-shadow: 0;
+	border: 0;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	transition: all .15s;
+	margin-top: 10px;
+	
+	&:hover {
+		opacity: .8;
+	}
+	
+	i {
+		margin-left: 10px;
+		font-size: 1.2rem;
+		line-height: 1;
+		
+		&.ion-android-add {
+			margin-top: 1px;
+		}
+	}
+	
+	+ .btn {
+		margin-left: 10px;
+	}
+	
+	&.btn-grey {
+		background-color: rgba(0, 0, 0, .1);
+	}
+	
+	&.btn-primary {
+		background-color: $prim;
+		color: white;
+	}
+	
+	&.btn-danger {
+		background-color: $danger;
+		color: white;
+	}
+	
+	&.btn-square {
+		i {
+			margin: 0;
+		}
+	}
+}
+
+// Cards
+
+.card-wrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 15px;
+}
+
+.card {
+	background-color: rgb(245, 245, 245);
+	border-radius: 4px;
+	padding: 10px;
+	
+	.card-footer {
+		margin-top: 15px;
+	}
+}
+
+.card-person {
+	margin: 5px;
+	padding: 30px 10px;
+	flex: 0 0 calc(33% - 10px);
+}
+
+.card-form {
+	max-width: 340px;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+// Form
+
+.form {
+	margin-top: 15px;
+	
+	.form-footer {
+		margin-top: 20px;
+	}
+	
+	label {
+		display: block;
+		margin-bottom: 10px;
+		
+		span {
+			display: block;
+			opacity: .66;
+			margin-bottom: 5px;
+			text-align: left;
+			
+			&.help {
+				text-align: right;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				opacity: .33;
+			}
+		}
+		
+		input {
+			width: 100%;
+			background-color: white;
+			appearance: none;
+			border-radius: 4px;
+			padding: 10px 15px;
+			box-shadow: 0;
+			border: 1px solid rgba(0, 0, 0, .1);
+			transition: all .15s;
+			margin: 0;
+			
+			&:hover {
+				background-color: rgb(240, 240, 240);
+			}
+			
+			&:focus {
+				outline: none;
+				border-color: $prim;
+			}
+		}
+	}
+	
+	input {
+		margin-bottom: 10px;
+	}
+}
+
+// Traits
+
+.traits {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	
+	.trait {
+		background-color: rgba(0, 0, 0, .1);
+		display: block;
+		padding: 3px 5px;
+		margin: 2px;
+		border-radius: 2px;
+		
+		&.clickable {
+			cursor: pointer;
+			transition: all .15s;
+			
+			&:hover {
+				background-color: rgba(0, 0, 0, .05);
+				color: rgba(0, 0, 0, .5);
+			}
+		}
+	}
+}
+
+// Footer
+
+footer {	
+	a {
+		color: black;
+	}
+}

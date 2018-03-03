@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+body,
+button,
+input {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+header {
+  padding: 60px 15px 30px;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.sub {
+  opacity: .66;
+}
+
+.counter {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+}
+
+.btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  border: 0;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  margin-top: 10px;
+}
+.btn:hover {
+  opacity: .8;
+}
+.btn i {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.btn i.ion-android-add {
+  margin-top: 1px;
+}
+.btn + .btn {
+  margin-left: 10px;
+}
+.btn.btn-grey {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btn.btn-primary {
+  background-color: #328eff;
+  color: white;
+}
+.btn.btn-danger {
+  background-color: #ef2d40;
+  color: white;
+}
+.btn.btn-square i {
+  margin: 0;
+}
+
+.card-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 15px;
+}
+
+.card {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 10px;
+}
+.card .card-footer {
+  margin-top: 15px;
+}
+
+.card-person {
+  margin: 5px;
+  padding: 30px 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33% - 10px);
+          flex: 0 0 calc(33% - 10px);
+}
+
+.card-form {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.form {
+  margin-top: 15px;
+}
+.form .form-footer {
+  margin-top: 20px;
+}
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form label span {
+  display: block;
+  opacity: .66;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.form label span.help {
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  opacity: .33;
+}
+.form label input {
+  width: 100%;
+  background-color: white;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  margin: 0;
+}
+.form label input:hover {
+  background-color: #f0f0f0;
+}
+.form label input:focus {
+  outline: none;
+  border-color: #328eff;
+}
+.form input {
+  margin-bottom: 10px;
+}
+
+.traits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 15px;
+}
+.traits .trait {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 3px 5px;
+  margin: 2px;
+  border-radius: 2px;
+}
+.traits .trait.clickable {
+  cursor: pointer;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+.traits .trait.clickable:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+  color: black;
+}
